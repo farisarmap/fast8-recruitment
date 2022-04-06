@@ -2090,3 +2090,65 @@ info: Apr-06-2022 16:23:00: POST /api/companies/3/employees 201 79 - 30.436 ms
 
 info: Apr-06-2022 16:25:26: PUT /api/companies/2/employees/8 201 78 - 71.890 ms
 
+info: Apr-06-2022 16:38:57: Server listing at http://localhost:3000
+info: Apr-06-2022 16:39:21: POST /api/fibonacci 200 90 - 198.534 ms
+
+error: Apr-06-2022 16:39:38: 400 - n is required - /api/fibonacci - POST - ::1
+info: Apr-06-2022 16:39:38: POST /api/fibonacci 400 65 - 5.574 ms
+
+info: Apr-06-2022 16:40:30: POST /api/fibonacci 200 90 - 0.782 ms
+
+info: Apr-06-2022 16:40:50: POST /api/combination 200 67 - 2.669 ms
+
+error: Apr-06-2022 16:41:05: 400 - n or r is required - /api/combination - POST - ::1
+info: Apr-06-2022 16:41:05: POST /api/combination 400 70 - 1.741 ms
+
+error: Apr-06-2022 16:41:09: 400 - n or r is required - /api/combination - POST - ::1
+info: Apr-06-2022 16:41:09: POST /api/combination 400 70 - 2.699 ms
+
+info: Apr-06-2022 16:41:45: POST /api/companies 201 63 - 185.352 ms
+
+error: Apr-06-2022 16:42:06: 400 - company_name is required - /api/companies - POST - ::1
+info: Apr-06-2022 16:42:06: POST /api/companies 400 76 - 8.146 ms
+
+error: Apr-06-2022 16:42:17: 409 - Company Name already exist - /api/companies - POST - ::1
+info: Apr-06-2022 16:42:17: POST /api/companies 409 78 - 11.663 ms
+
+info: Apr-06-2022 16:42:40: GET /api/companies 200 852 - 14.728 ms
+
+info: Apr-06-2022 16:43:29: PUT /api/companies/7/set_active 200 80 - 45.785 ms
+
+error: Apr-06-2022 16:44:01: 422 - Data is not found - /api/companies/8/set_active - PUT - ::1
+info: Apr-06-2022 16:44:01: PUT /api/companies/8/set_active 422 69 - 5.663 ms
+
+error: Apr-06-2022 16:44:17: 400 - Company is already active - /api/companies/7/set_active - PUT - ::1
+info: Apr-06-2022 16:44:17: PUT /api/companies/7/set_active 400 77 - 33.047 ms
+
+info: Apr-06-2022 16:45:16: GET /api/companies/3/employees 200 368 - 17.548 ms
+
+error: Apr-06-2022 16:45:43: 422 - Data is not found - /api/companies/9/employees - GET - ::1
+info: Apr-06-2022 16:45:43: GET /api/companies/9/employees 422 69 - 15.497 ms
+
+info: Apr-06-2022 16:46:16: GET /api/employees/7 200 131 - 50.989 ms
+
+info: Apr-06-2022 16:46:30: GET /api/employees/9 200 138 - 5.554 ms
+
+error: Apr-06-2022 16:46:34: 422 - Data is not found - /api/employees/12 - GET - ::1
+info: Apr-06-2022 16:46:34: GET /api/employees/12 422 69 - 6.351 ms
+
+info: Apr-06-2022 16:46:43: GET /api/employees/10 200 133 - 2.427 ms
+
+info: Apr-06-2022 16:47:42: PUT /api/companies/2/employees/8 201 78 - 320.256 ms
+
+error: Apr-06-2022 16:48:14: 400 - name is required - /api/companies/2/employees/8 - PUT - ::1
+info: Apr-06-2022 16:48:14: PUT /api/companies/2/employees/8 400 68 - 1.966 ms
+
+error: Apr-06-2022 16:48:26: 409 - Email already exist - /api/companies/2/employees/8 - PUT - ::1
+info: Apr-06-2022 16:48:26: PUT /api/companies/2/employees/8 409 71 - 9.408 ms
+
+info: Apr-06-2022 16:48:41: DELETE /api/employees/8 204 - - 16.787 ms
+
+info: Apr-06-2022 16:49:00: GET /api/countries 200 262668 - 1165.220 ms
+
+info: Apr-06-2022 16:49:08: GET /api/countries 200 262668 - 656.327 ms
+
