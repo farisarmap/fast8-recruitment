@@ -34,6 +34,7 @@ module.exports = {
 						data: {
 							id: createCompany.id,
 						},
+						message: "Success",
 					})
 				}
 			}
@@ -43,7 +44,9 @@ module.exports = {
 	},
 	getCompany: async (req, res, next) => {
 		try {
-			const data = await Company.findAndCountAll()
+			const data = await Company.findAndCountAll({
+				attributes: { exclude: ["createdAt", "updatedAt"] },
+			})
 			if (data) {
 				res.status(200).json({
 					status: 200,

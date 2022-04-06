@@ -42,6 +42,7 @@ module.exports = {
 							id: createEmployee.id,
 							company_id: createEmployee.company_id,
 						},
+						message: "Success",
 					})
 				}
 			}
@@ -77,7 +78,7 @@ module.exports = {
 					],
 				},
 			})
-			if (data.employees.length !== 0) {
+			if (data) {
 				res.status(200).json({
 					status: 200,
 					code: "200",
@@ -125,8 +126,6 @@ module.exports = {
 	},
 	editEmployee: async (req, res, next) => {
 		try {
-			// validate email already exist = x
-			// validate email requeired = x
 			const employee_id = req.params.employee_id
 			const company_id = req.params.company_id
 			const { body } = req
@@ -143,7 +142,7 @@ module.exports = {
 					const findEmployeeByEmail = await Employee.findAll({
 						where: { email: value.email },
 					})
-					if (!findEmployeeByEmail) {
+					if (findEmployeeByEmail.length !== 0) {
 						next({
 							status: 409,
 							code: "409",
